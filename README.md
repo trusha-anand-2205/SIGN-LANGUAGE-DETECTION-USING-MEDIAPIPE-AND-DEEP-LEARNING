@@ -2,25 +2,10 @@
 Overview
 This project is dedicated to breaking communication barriers for individuals with hearing and speech impairments through the development of a real-time sign language detection system. Utilizing MediaPipe for hand tracking and integrating it with deep learning models, particularly Long Short-Term Memory (LSTM) networks, the system interprets American Sign Language (ASL) hand gestures and translates them into text. This README provides an in-depth explanation of the project, its goals, and implementation details.
 ________________________________________
-Table of Contents
-1.	Abstract
-2.	Motivation
-3.	Methodology
-o	Data Collection
-o	Data Preprocessing
-o	Model Training
-4.	Framework
-5.	Key Components
-6.	Installation
-7.	Usage
-8.	Results
-9.	Future Enhancements
-10.	Conclusion
-________________________________________
-Abstract
+
 Humans are inherently social, relying on communication to interact and thrive. For individuals with hearing or speech impairments, sign language serves as a vital bridge, facilitating communication. This project focuses on developing a sign language detection system using ASL (American Sign Language), the most commonly used sign language. By leveraging the precision of MediaPipe's hand-tracking framework and the power of deep learning, specifically LSTM models, this system can detect and interpret dynamic hand gestures in real time, enabling seamless communication for sign language users. The project's ultimate goal is to promote inclusivity by reducing communication barriers, thus enhancing the quality of life for Deaf individuals.
 ________________________________________
-Motivation
+
 The motivation behind this project stems from several key factors:
 1. Empowering the Deaf and Hard of Hearing Community
 For millions of people globally, sign language is the primary means of communication. This project seeks to empower Deaf individuals by providing a tool that helps them communicate more easily with those who may not understand sign language. This system is aimed at creating a bridge for the hearing-impaired to access education, employment, and daily activities more independently.
@@ -29,7 +14,7 @@ Sign language users often face communication challenges that limit their partici
 3. Enhancing Everyday Interactions
 From navigating public services to shopping or even healthcare, effective communication is vital. This sign language detection system makes these interactions more accessible, ensuring that individuals with hearing impairments can participate fully in daily life activities.
 ________________________________________
-Methodology
+
 The project follows a comprehensive methodology for developing a sign language detection system that integrates deep learning and MediaPipe for efficient hand gesture recognition.
 1. Data Collection
 We created our own dataset of 26 English alphabet signs in ASL by capturing hand gestures via a webcam. OpenCV is utilized to access the webcam, and each frame is captured as the user signs the letters. The data is organized into folders labeled A-Z, corresponding to the respective hand gestures.
@@ -52,7 +37,7 @@ Key Model Features:
 •	The model was trained over 200 epochs using TensorBoard for real-time monitoring.
 The trained model can recognize gestures in real-time by processing a series of video frames, offering a smooth and responsive user experience.
 ________________________________________
-Framework
+
 The proposed methodology for this project integrates multiple technologies:
 •	MediaPipe: Used for efficient hand tracking and landmark detection.
 •	Keras and TensorFlow: Provide a robust deep learning framework for training the LSTM model.
@@ -69,21 +54,6 @@ LSTM (Long Short-Term Memory) networks are a type of Recurrent Neural Network (R
 OpenCV is employed for real-time video capture, providing the ability to record and process hand gestures using a webcam. It also enables ROI (Region of Interest) selection, ensuring that only the hand region is used for recognition.
 4. Keras and TensorFlow
 These deep learning frameworks streamline the process of building, training, and deploying the LSTM model. They offer efficient handling of the complex computations required for video-based gesture recognition.
-________________________________________
-Usage
-Running the Project
-To start the real-time sign language detection system:
-1.	Navigate to the project directory.
-2.	Run the Python script to start the webcam-based sign detection.
-bash
-Copy code
-python sign_language_detection.py
-Dataset Collection
-For collecting custom sign language datasets, use the data_collection.py script. This will allow you to label and store hand gestures in separate folders for each alphabet.
-bash
-Copy code
-python data_collection.py
-The captured data will be automatically saved in directories named A-Z based on the key pressed while performing the gestures.
 ________________________________________
 Results
 The model achieved high accuracy in classifying sign language gestures after training on our dataset. Here are key results:
